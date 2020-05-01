@@ -109,5 +109,30 @@ public class ContatoDao {
 		}
 	}
 	
+	public void busca() {
+		try {
+		    PreparedStatement stmt = connection.prepareStatement("select * from contatos where id=?");
+		    ResultSet rs = stmt.executeQuery();
+		    Contato contato1 = new Contato();
+		    contato1.SetId(rs.getLong("id"));
+		    contato1.setNome(rs.getString("nome"));
+		    contato1.setEmail(rs.getString("email"));
+		    contato1.setEndereco(rs.getString("endereco"));
+	//	    contato1.setDataNascimento(rs.getCa("datanascimento"));
+		    
+			
+			// montando a Data atraves do Calendar
+			Calendar data = Calendar.getInstance();
+			data.setTime(rs.getDate("dataNascimento"));
+			contato1.setDataNascimento(data);
+			
+
+				rs.close();
+				stmt.close();
+				return;		
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+	
+	}
 }
- 

@@ -1,5 +1,6 @@
 package br.com.estudo.jdbc.modelo;
 
+import java.sql.Date;
 import java.util.Calendar;
 
 public class Contato {
@@ -13,8 +14,8 @@ public class Contato {
 		return this.id;
 	}
 	
-	public void SetId(Long id) {
-		this.id = id;
+	public void SetId(long l) {
+		this.id = (long) l;
 	}
 	
 	public String getNome() {
