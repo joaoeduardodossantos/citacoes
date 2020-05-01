@@ -8,6 +8,14 @@ public class Contato {
 	private String email;
 	private String endereco;
 	private Calendar dataNascimento;
+
+	public Long getId() {
+		return this.id;
+	}
+	
+	public void SetId(Long id) {
+		this.id = id;
+	}
 	
 	public String getNome() {
 		return this.nome;
@@ -30,7 +38,7 @@ public class Contato {
 	}
 	
 	public void setEndereco(String endereco) {
-		this.email = endereco;
+		this.endereco = endereco;
 	}
 	
 	public Calendar getDataNascimento() {

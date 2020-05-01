@@ -9,8 +9,8 @@ public class TesteInsere {
    public static void main(String[] args) {
 	// pronto para gravar
 	  Contato contato = new Contato();
-	  contato.setNome("Joao");
-	  contato.setEmail("joao@joao.com.br");
+	  contato.setNome("Christina");
+	  contato.setEmail("christina@joao.com.br");
 	  contato.setEndereco("Rua XV Novembro 2");
 	  contato.setDataNascimento(Calendar.getInstance());
 	  
