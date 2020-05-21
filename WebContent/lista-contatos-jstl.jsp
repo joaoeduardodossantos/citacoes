@@ -1,11 +1,12 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="if" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
     
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -16,7 +17,7 @@
 <c:import url="cabecalho.jsp" />
 
 <!--  Cria o dao -->
-<jsp:useBean id="dao" class="br.com.estudo.agenda.dao.ContatoDao" />
+<!--<jsp:useBean id="dao" class="br.com.estudo.agenda.dao.ContatoDao" /> -->
 	<table>
 			<tr>
 				<td>Nome</td>
@@ -26,8 +27,9 @@
 			</tr>
 	
 		<%-- percorre os dados, montando as linhas da tabela --%>
-		<c:forEach var="contato" items="${dao.lista}" >
-			
+	
+	
+			<c:forEach var="contato" items="${contatos}">
 		
 			<tr>
 				<td>${contato.nome}</td>
